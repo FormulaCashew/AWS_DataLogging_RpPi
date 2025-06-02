@@ -3,6 +3,8 @@
 This project involves reading data from an SPI device connected to a Raspberry Pi 3B and sending the received data to AWS via an API.
 The goal is to establish a seamless data pipeline from a local device (via SPI) to the cloud (via AWS).
 
+--
+
 ## Prerrequisites
 
 Before starting, make sure you have the following:
@@ -13,7 +15,9 @@ Before starting, make sure you have the following:
 - **AWS Account** with acces to API Gateway, IoT Core, or any other service you want to send data to
 - Internet connection for the Raspberry Pi
 
-## Installation
+--
+
+## Installation on Raspberry Pi
 
 ## 1. Set Up the Raspberry Pi
 
@@ -26,4 +30,37 @@ sudo reboot
 
 ## 2. Create a virtual environment
 
+sudo apt update
+
+sudo apt install python3-venv python3-pip -y
+
+mkdir ~/esp_temp_monitor
+cd ~/esp_temp_monitor
+
+python3 -m venv venv
+source venv/bin/activate
+
+## 3. Install dependencies
+
+pip install -r requierements.txt
+
 ## 3. Configure AWS
+
+### Using  API Gateway + Lambda (HTTP REST)
+
+Create an API Gateway REST
+Connect with a Lambda function
+Change main.py as required
+Lambda can store data in DynamoDB or S3
+
+### Using AWS IoT Core (MQTT)
+
+Create a "Thing" in AWS IoT Core
+Download certificates:
+- certificate.pem.crt
+- private.key
+- AmazonRootCA1.pem
+Configure the endpoint and credentials in main.py
+
+## 4. Execute the script
+ sudo python3 main.py
