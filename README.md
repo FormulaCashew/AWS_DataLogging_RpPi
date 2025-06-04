@@ -24,14 +24,14 @@ Before starting, make sure you have the following:
 
 use the commands:
 
-'''
+```bash
 sudo raspi-config // Enable SPI in Interface Options > Serial Interface > Enable
 sudo reboot
-'''
+```
 
 ## 2. Create a virtual environment
 
-'''
+```
 sudo apt update
 
 sudo apt install python3-venv python3-pip -y
@@ -41,13 +41,13 @@ cd ~/esp_temp_monitor
 
 python3 -m venv venv
 source venv/bin/activate
-'''
+```
 
 ## 3. Install dependencies
 
-'''
+```
 pip install -r requierements.txt
-'''
+```
 
 ## 3. Configure AWS
 
@@ -68,6 +68,6 @@ Download certificates:
 Configure the endpoint and credentials in main.py
 
 ## 4. Execute the script
-''' 
+``` 
 sudo python3 main.py
-'''
+```
