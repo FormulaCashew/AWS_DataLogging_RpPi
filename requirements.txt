@@ -1,3 +1,2 @@
-spidev
-requests 
-AWSIoTPythonSDK
+pyserial
+requests
