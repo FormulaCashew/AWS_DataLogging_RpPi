@@ -1,11 +1,20 @@
 import serial
 import time
 import requests
+import datetime
 
-URL = "API-URL"
+URL = "API_URL"
 
 UART_PORT="/dev/ttyS0"
 BAUD_RATE=115200 #This is actually smtg on the lines of 71455 bps
+
+LOG_FILE = "data.txt"
+
+def log_temperature(temperatura: str):
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open(LOG_FILE, "a") as f:
+        f.write(f"{timestamp}, {temperatura}°C\n")
+	print("Data stored")
 
 def read_command():
 	try:
@@ -39,7 +48,8 @@ if __name__ == "__main__":
 		while True:
 			temp = read_command()
 			if temp:
-				send_aws(temp)
+				log_temperature(temp)
+				#send_aws(temp)
 			time.sleep(1)
 	except KeyboardInterrupt:
 		print("\nInterrupted by user")
