@@ -76,5 +76,5 @@ sudo python3 main.py
 
 Using the data stored one may check the acquired data and use it as desired
 
-An example for its usage:
+Originally intended to use with:
 https://github.com/FormulaCashew/RaspberryPi-Flask-graph
