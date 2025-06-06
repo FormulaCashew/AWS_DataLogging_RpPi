@@ -58,7 +58,7 @@ pip install -r requierements.txt
 - Change main.py as required
 - Lambda can store data in DynamoDB
 
-(Optional)
+####(Optional)
 - Use an S3 Bucket to graph data
 
 ### Using AWS IoT Core (MQTT)
