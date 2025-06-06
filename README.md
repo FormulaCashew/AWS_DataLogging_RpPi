@@ -45,7 +45,7 @@ source venv/bin/activate
 
 ## 3. Install dependencies
 
-```
+```bash
 pip install -r requierements.txt
 ```
 
@@ -68,6 +68,13 @@ Download certificates:
 Configure the endpoint and credentials in main.py
 
 ## 4. Execute the script
-``` 
+```bash
 sudo python3 main.py
 ```
+
+## 5. (Optional) Check data
+
+Using the data stored one may check the acquired data and use it as desired
+
+An example for its usage:
+https://github.com/FormulaCashew/RaspberryPi-Flask-graph
