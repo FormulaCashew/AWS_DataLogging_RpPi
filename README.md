@@ -53,10 +53,13 @@ pip install -r requierements.txt
 
 ### Using  API Gateway + Lambda (HTTP REST)
 
-Create an API Gateway REST
-Connect with a Lambda function
-Change main.py as required
-Lambda can store data in DynamoDB or S3
+- Create an API Gateway REST
+- Connect with a Lambda function
+- Change main.py as required
+- Lambda can store data in DynamoDB
+
+(Optional)
+- Use an S3 Bucket to graph data
 
 ### Using AWS IoT Core (MQTT)
 
